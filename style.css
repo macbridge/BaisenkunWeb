@@ -1,0 +1,188 @@
+/* 焙煎くん - 共通スタイル */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background: #fdf8f4;
+  color: #2c1a0e;
+  line-height: 1.8;
+}
+
+header {
+  background: linear-gradient(135deg, #5C2D00, #A0522D);
+  color: #fff;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+header .logo { line-height: 0; }
+header .logo img { width: 48px; height: 48px; border-radius: 10px; }
+header .site-title { font-size: 20px; font-weight: 700; letter-spacing: .05em; }
+header .site-subtitle { font-size: 12px; opacity: .8; margin-top: 2px; }
+
+nav {
+  background: #fff;
+  border-bottom: 1px solid #e8d5c4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+nav a {
+  display: block;
+  padding: 13px 20px;
+  text-decoration: none;
+  color: #7B3F00;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  transition: border-color .2s, background .2s;
+}
+nav a:hover, nav a.active {
+  border-bottom-color: #A0522D;
+  background: #fdf0e6;
+}
+
+.container { max-width: 820px; margin: 0 auto; padding: 36px 24px 60px; }
+
+h1 { font-size: 22px; font-weight: 700; margin-bottom: 28px; padding-bottom: 10px;
+     border-bottom: 2px solid #A0522D; color: #5C2D00; }
+h2 { font-size: 16px; font-weight: 700; margin: 32px 0 10px;
+     padding: 6px 12px; background: #fdf0e6; border-left: 4px solid #A0522D;
+     color: #5C2D00; border-radius: 0 6px 6px 0; }
+h3 { font-size: 15px; font-weight: 700; margin: 20px 0 8px; color: #A0522D; }
+
+p { margin-bottom: 12px; }
+ul, ol { margin: 8px 0 12px 20px; }
+li { margin-bottom: 4px; }
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(92,45,0,.08);
+}
+
+.badge {
+  display: inline-block;
+  background: #7B3F00;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.qa-item { margin-bottom: 20px; }
+.qa-item .q { font-weight: 700; color: #5C2D00; margin-bottom: 4px; }
+.qa-item .q::before { content: "Q. "; color: #A0522D; }
+.qa-item .a { color: #4a3728; padding-left: 16px; }
+.qa-item .a::before { content: "A. "; color: #A0522D; font-weight: 700; }
+
+.legal-section { margin-bottom: 24px; }
+.legal-section h3 { border-bottom: 1px solid #e8d5c4; padding-bottom: 6px; }
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #8c6a4a;
+  font-size: 12px;
+  border-top: 1px solid #e8d5c4;
+  background: #fff;
+}
+footer a { color: #7B3F00; text-decoration: none; }
+
+.hero {
+  background: linear-gradient(135deg, #7B3F00 0%, #A0522D 50%, #C1713A 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 40px 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.hero .icon { margin-bottom: 16px; line-height: 0; }
+.hero .icon img { width: 80px; height: 80px; border-radius: 18px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+.hero h2 { font-size: 24px; margin-bottom: 8px; background: none; border: none;
+           padding: 0; color: #fff; border-radius: 0; }
+.hero p { opacity: .9; font-size: 15px; margin-bottom: 0; }
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.link-card {
+  background: #fff;
+  border: 1px solid #e8d5c4;
+  border-radius: 10px;
+  padding: 20px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #2c1a0e;
+  transition: box-shadow .2s, transform .2s;
+  display: block;
+}
+.link-card:hover { box-shadow: 0 4px 12px rgba(160,82,45,.2); transform: translateY(-2px); }
+.link-card .icon { font-size: 28px; margin-bottom: 8px; }
+.link-card .label { font-size: 13px; font-weight: 700; color: #7B3F00; }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 18px;
+  box-shadow: 0 1px 4px rgba(92,45,0,.08);
+  border-top: 3px solid #A0522D;
+}
+.feature-card .f-icon { font-size: 26px; margin-bottom: 10px; }
+.feature-card h3 { font-size: 14px; margin: 0 0 6px; }
+.feature-card p { font-size: 13px; color: #6b4c35; margin: 0; }
+
+.step-list { counter-reset: step; list-style: none; margin: 0; padding: 0; }
+.step-list li {
+  counter-increment: step;
+  padding: 12px 16px 12px 56px;
+  position: relative;
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(92,45,0,.06);
+}
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px; height: 28px;
+  background: #A0522D;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.roast-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.roast-table th { background: #7B3F00; color: #fff; padding: 8px 12px; text-align: left; }
+.roast-table td { padding: 8px 12px; border-bottom: 1px solid #e8d5c4; }
+.roast-table tr:nth-child(even) td { background: #fdf8f4; }
+
+@media (max-width: 600px) {
+  header { padding: 16px; }
+  .container { padding: 24px 16px 48px; }
+  .card { padding: 18px 16px; }
+  nav a { padding: 10px 14px; font-size: 13px; }
+  .hero { padding: 28px 20px; }
+}

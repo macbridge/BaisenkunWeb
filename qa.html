@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問 - 焙煎くん</title>
+  <meta name="description" content="焙煎くんに関するよくある質問と回答をまとめています。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image/icon.png">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="image/icon.png" alt="焙煎くんアイコン"></div>
+  <div>
+    <div class="site-title">焙煎くん</div>
+    <div class="site-subtitle">コーヒー豆焙煎記録アプリ</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">ホーム</a>
+  <a href="manual.html">使い方</a>
+  <a href="qa.html" class="active">Q&amp;A</a>
+  <a href="terms.html">利用規約</a>
+  <a href="privacy.html">プライバシーポリシー</a>
+</nav>
+
+<div class="container">
+
+  <h1>よくある質問（Q&amp;A）</h1>
+
+  <!-- ========== 基本的な使い方 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">基本的な使い方</h2>
+
+    <div class="qa-item">
+      <div class="q">無料で使えますか？</div>
+      <div class="a">はい、焙煎くんは基本機能を無料でお使いいただけます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">対応しているiOSのバージョンを教えてください。</div>
+      <div class="a">iOS 17以降を搭載したiPhoneでご利用いただけます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">iPadでも使えますか？</div>
+      <div class="a">iPhoneアプリとしての提供となります。iPadでも動作しますが、iPad専用の最適化は行っておりません。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">データはどこに保存されますか？</div>
+      <div class="a">すべてのデータはお使いのiPhone端末内（SwiftDataデータベース）に保存されます。外部サーバーへの送信は一切行いません。</div>
+    </div>
+  </div>
+
+  <!-- ========== 焙煎記録 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">焙煎の記録について</h2>
+
+    <div class="qa-item">
+      <div class="q">焙煎中に温度を入力するタイミングはいつがいいですか？</div>
+      <div class="a">30秒〜1分間隔での記録が推奨です。設定でリマインダー通知の間隔を設定すると、入力タイミングをお知らせします。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">豆温度と排気温度の両方を入力しないといけませんか？</div>
+      <div class="a">いいえ。豆温度・排気温度はどちらか一方だけでも記録できます。お使いの焙煎機に合わせてご利用ください。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">1ハゼを記録し忘れました。後から編集できますか？</div>
+      <div class="a">焙煎終了後、履歴の詳細画面から「編集」ボタンをタップすると、1ハゼ・2ハゼの時刻を編集できます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">焙煎セッションを誤って終了してしまいました。</div>
+      <div class="a">一度終了したセッションを再開することはできませんが、履歴の編集画面から焙煎日時・各種記録を修正することは可能です。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">ROR（温度上昇率）グラフはどうやって計算されていますか？</div>
+      <div class="a">記録された豆温度データを元に、前後の測定点から1分あたりの温度上昇率（℃/分）を計算しています。測定間隔が長いほどRORの精度は下がるため、こまめな記録をおすすめします。</div>
+    </div>
+  </div>
+
+  <!-- ========== プロファイル ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">焙煎プロファイルについて</h2>
+
+    <div class="qa-item">
+      <div class="q">焙煎プロファイルとは何ですか？</div>
+      <div class="a">目標とする温度・時間などを事前に登録しておくテンプレートです。焙煎開始時にプロファイルを選択すると、グラフに目標ラインが重ねて表示され、計画通りの焙煎をサポートします。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">プロファイルに焙煎機・器具名を設定するとどうなりますか？</div>
+      <div class="a">焙煎開始画面で入力した器具名と異なる場合、「このプロファイルは○○用です」という注意メッセージが表示されます。焙煎自体は問題なく開始できます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">カスタムアラートとは何ですか？</div>
+      <div class="a">プロファイルに登録できる、時間・温度をトリガーとした通知です。たとえば「8分経過時: ダンパーを開けてください」のような自分だけのチェックポイントを設定できます。</div>
+    </div>
+  </div>
+
+  <!-- ========== データ管理 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">データ管理について</h2>
+
+    <div class="qa-item">
+      <div class="q">データをバックアップするにはどうすればいいですか？</div>
+      <div class="a">設定画面の「データ管理」からJSONファイルとしてエクスポートできます。焙煎セッション・豆ライブラリ・プロファイルをそれぞれ別ファイルでエクスポートできます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">エクスポートしたデータは別のiPhoneに移行できますか？</div>
+      <div class="a">はい。エクスポートしたJSONファイルを新しいiPhoneに転送し、設定画面の「データ管理」からインポートすることでデータを引き継げます。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">インポートすると既存のデータは消えますか？</div>
+      <div class="a">インポートはデータの追加（マージ）ではなく、既存データへの上書きとなる場合があります。インポート前に現在のデータをエクスポートしてバックアップしておくことをおすすめします。</div>
+    </div>
+  </div>
+
+  <!-- ========== その他 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">その他</h2>
+
+    <div class="qa-item">
+      <div class="q">通知が届きません。</div>
+      <div class="a">iPhoneの「設定」→「通知」→「焙煎くん」から通知が許可されているか確認してください。また、設定画面でリマインダー間隔が「なし」になっていないかご確認ください。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="q">アプリの不具合や要望を伝えたいです。</div>
+      <div class="a">開発者まで <a href="mailto:bigmoss@gmail.com" style="color: #7B3F00;">bigmoss@gmail.com</a> にお送りください。いただいたフィードバックは今後のアップデートに活かしてまいります。</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 StudioBB. All rights reserved.</p>
+  <p style="margin-top: 6px;">
+    <a href="terms.html">利用規約</a> &nbsp;|&nbsp;
+    <a href="privacy.html">プライバシーポリシー</a>
+  </p>
+</footer>
+
+</body>
+</html>
