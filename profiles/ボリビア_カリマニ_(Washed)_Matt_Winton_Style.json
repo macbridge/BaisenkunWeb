@@ -1,0 +1,19 @@
+{
+  "exportedAt": "2026-05-06T09:00:00Z",
+  "profiles": [
+    {
+      "chargeTemp": 210,
+      "memo": "Matt Winton Style - ボリビア カリマニ (Washed) - Optimized for Light roast.",
+      "name": "ボリビア カリマニ (Washed) Matt Winton Style",
+      "targetDTR": 10,
+      "targetDropTemp": 204,
+      "targetDryingEndTemp": 155,
+      "targetEquipment": "ROEST / Sample Roaster",
+      "targetFirstCrackMin": 6,
+      "targetFirstCrackTemp": 200,
+      "targetMaillardEndTemp": 195,
+      "targetRoastLevel": "Light Roast",
+      "totalTargetMinutes": 7.5
+    }
+  ]
+}

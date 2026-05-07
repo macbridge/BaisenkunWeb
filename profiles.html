@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロファイル配布 - 珈琲豆焙煎くん</title>
+  <meta name="description" content="Matt Winton Styleの焙煎プロファイルを無料配布。珈琲豆焙煎くんアプリに直接インポートできます。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image/icon.png">
+  <style>
+    .download-btn {
+      display: inline-block;
+      background: #A0522D;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .download-btn:hover { background: #7B3F00; }
+    .download-btn-large {
+      display: inline-block;
+      background: linear-gradient(135deg, #5C2D00, #A0522D);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s;
+      letter-spacing: .05em;
+    }
+    .download-btn-large:hover { opacity: .88; transform: translateY(-1px); }
+    .profile-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .profile-table th { background: #7B3F00; color: #fff; padding: 8px 10px; text-align: left; white-space: nowrap; }
+    .profile-table td { padding: 8px 10px; border-bottom: 1px solid #e8d5c4; vertical-align: middle; }
+    .profile-table tr:nth-child(even) td { background: #fdf8f4; }
+    .badge-light { background: #2563eb; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    .badge-mlight { background: #16a34a; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    .badge-medium { background: #d97706; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+    .concept-card { background: #fff; border-radius: 10px; padding: 18px 16px; box-shadow: 0 1px 4px rgba(92,45,0,.08); border-top: 3px solid #A0522D; }
+    .concept-card .c-icon { font-size: 24px; margin-bottom: 8px; }
+    .concept-card h4 { font-size: 14px; font-weight: 700; margin: 0 0 6px; color: #5C2D00; }
+    .concept-card p { font-size: 13px; color: #6b4c35; margin: 0; }
+    .import-steps { counter-reset: istep; list-style: none; margin: 0; padding: 0; }
+    .import-steps li {
+      counter-increment: istep;
+      padding: 12px 16px 12px 56px;
+      position: relative;
+      margin-bottom: 8px;
+      background: #fdf8f4;
+      border-radius: 8px;
+    }
+    .import-steps li::before {
+      content: counter(istep);
+      position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+      width: 28px; height: 28px; background: #A0522D; color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700;
+    }
+    .bulk-dl-box { text-align: center; padding: 32px 24px; background: linear-gradient(135deg, #fdf0e6, #fff); border-radius: 12px; border: 2px solid #e8d5c4; margin-bottom: 8px; }
+    .bulk-dl-box p { margin-bottom: 20px; color: #5C2D00; font-weight: 700; font-size: 15px; }
+    .bulk-dl-box small { display: block; margin-top: 12px; color: #8c6a4a; font-size: 13px; }
+    @media (max-width: 600px) {
+      .profile-table { font-size: 12px; }
+      .profile-table th, .profile-table td { padding: 6px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="image/icon.png" alt="珈琲豆焙煎くんアイコン"></div>
+  <div>
+    <div class="site-title">珈琲豆焙煎くん</div>
+    <div class="site-subtitle">コーヒー豆焙煎記録アプリ</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">ホーム</a>
+  <a href="manual.html">使い方</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="profiles.html" class="active">プロファイル配布</a>
+  <a href="terms.html">利用規約</a>
+  <a href="privacy.html">プライバシーポリシー</a>
+</nav>
+
+<div class="container">
+
+  <h1>プロファイル配布</h1>
+
+  <!-- ========== 解説 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">Matt Winton Style とは</h2>
+    <p>
+      Matt Winton Style は、<strong>「High Energy, Short Time（高エネルギー・短時間）」</strong>を基本コンセプトとした焙煎アプローチです。
+      短時間で高いエネルギーを豆に投入し、<strong>明るい酸味・クリーンな甘み・フローラルな香り</strong>を最大限に引き出すことを目指します。
+      ここで配布するプロファイルは、世界バリスタチャンピオン Matt Winton 氏のスタイルを参考に、
+      ROEST Sample Roaster 向けに最適化したものです。
+    </p>
+
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="c-icon">🔥</div>
+        <h4>高い投入温度</h4>
+        <p>通常 205〜210℃ で投入。豆の芯まで素早く熱を伝え、中盤以降のエネルギー不足を防ぐ。TP（中点）を高く・早く通過させるのが特徴。</p>
+      </div>
+      <div class="concept-card">
+        <div class="c-icon">📉</div>
+        <h4>滑らかな RoR 管理</h4>
+        <p>1ハゼに向かって火力を段階的に絞り、RoR（温度上昇率）がなだらかに右肩下がりになるよう調整。「Baked（停滞による風味の欠如）」を防ぐ。</p>
+      </div>
+      <div class="concept-card">
+        <div class="c-icon">⏱️</div>
+        <h4>短いデベロップメント</h4>
+        <p>1ハゼ開始から煎り止めまでを 30〜45 秒程度に収める。DTR（デベロップメントタイム比）は全体の 8〜15% が目安。</p>
+      </div>
+      <div class="concept-card">
+        <div class="c-icon">☕</div>
+        <h4>豆の特性に合わせた調整</h4>
+        <p>高地産・硬い豆（エチオピア、ケニア等）は高い投入温度と強い初期火力。低地産・柔らかい豆（ブラジル等）は投入温度を数度下げて丁寧に管理。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 一括ダウンロード ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">全プロファイル一括ダウンロード</h2>
+    <div class="bulk-dl-box">
+      <p>20種のプロファイルをまとめてインポートできます</p>
+      <a class="download-btn-large" href="profiles/all_profiles.json" download="all_profiles.json">
+        ⬇️ &nbsp;全プロファイル一括ダウンロード（JSON）
+      </a>
+      <small>all_profiles.json ／ 20プロファイル収録</small>
+    </div>
+  </div>
+
+  <!-- ========== インポート方法 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">インポート方法</h2>
+    <ol class="import-steps">
+      <li>上の「全プロファイル一括ダウンロード」ボタン、または下の個別ダウンロードリンクをタップして JSON ファイルを保存します。</li>
+      <li>珈琲豆焙煎くんを起動し、<strong>「設定」</strong>画面を開きます。</li>
+      <li><strong>「データ管理」→「プロファイルをインポート」</strong>をタップします。</li>
+      <li>先ほど保存した JSON ファイルを選択するとインポートが完了します。</li>
+    </ol>
+    <p style="margin-top: 16px; font-size: 13px; color: #8c6a4a;">
+      ※ インポートは既存プロファイルへの追加として処理されます。重複する名前のプロファイルは上書きされる場合があります。インポート前に既存データをエクスポートしてバックアップすることをおすすめします。
+    </p>
+  </div>
+
+  <!-- ========== 個別プロファイル一覧 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">個別プロファイル一覧</h2>
+    <p style="font-size: 13px; color: #6b4c35; margin-bottom: 16px;">対象機器：ROEST / Sample Roaster</p>
+    <div style="overflow-x: auto;">
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>豆名</th>
+            <th>加工</th>
+            <th>焙煎度</th>
+            <th>Charge℃</th>
+            <th>Drop℃</th>
+            <th>1C目標℃</th>
+            <th>総時間</th>
+            <th>DTR</th>
+            <th>DL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>エチオピア イルガチェフェ</td>
+            <td>Washed</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/エチオピア_イルガチェフェ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>エチオピア グジ</td>
+            <td>Natural</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/エチオピア_グジ_(Natural)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ケニア AA</td>
+            <td>Washed</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/ケニア_AA_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>コロンビア ゲイシャ</td>
+            <td>Anaerobic</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/コロンビア_ゲイシャ_(Anaerobic)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>コスタリカ タルズ</td>
+            <td>Honey</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/コスタリカ_タルズ_(Honey)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>パナマ ゲイシャ</td>
+            <td>Washed</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/パナマ_ゲイシャ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ボリビア カリマニ</td>
+            <td>Washed</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>210</td><td>204</td><td>200</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/ボリビア_カリマニ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>コロンビア ウィラ</td>
+            <td>Washed</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>208</td><td>201</td><td>197</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/コロンビア_ウィラ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>エルサルバドル SHB</td>
+            <td>Honey</td>
+            <td><span class="badge-light">Light</span></td>
+            <td>208</td><td>201</td><td>197</td><td>7.5分</td><td>10%</td>
+            <td><a class="download-btn" href="profiles/エルサルバドル_SHB_(Honey)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>タンザニア キリマンジャロ</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>210</td><td>207</td><td>200</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/タンザニア_キリマンジャロ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>グアテマラ SHB</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>210</td><td>207</td><td>200</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/グアテマラ_SHB_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ルワンダ スカイヒル</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>210</td><td>207</td><td>200</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ルワンダ_スカイヒル_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ホンジュラス SHG</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>210</td><td>207</td><td>200</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ホンジュラス_SHG_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ブラジル サントス</td>
+            <td>Natural</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>205</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ブラジル_サントス_(Natural)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ペルー オーガニック</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>208</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ペルー_オーガニック_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>メキシコ SHG</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>208</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/メキシコ_SHG_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>パプアニューギニア シグリ</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>208</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/パプアニューギニア_シグリ_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ニカラグア SHB</td>
+            <td>Washed</td>
+            <td><span class="badge-mlight">Med-Light</span></td>
+            <td>208</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ニカラグア_SHB_(Washed)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>ブラジル セラード</td>
+            <td>Pulped Natural</td>
+            <td><span class="badge-medium">Medium</span></td>
+            <td>205</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/ブラジル_セラード_(Pulped_Natural)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+          <tr>
+            <td>インドネシア マンデリン</td>
+            <td>Giling Basah</td>
+            <td><span class="badge-medium">Medium</span></td>
+            <td>208</td><td>204</td><td>197</td><td>8.5分</td><td>13%</td>
+            <td><a class="download-btn" href="profiles/インドネシア_マンデリン_(Giling_Basah)_Matt_Winton_Style.json" download>DL</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ========== 注意事項 ========== -->
+  <div class="card">
+    <h2 style="margin-top: 0;">ご利用にあたって</h2>
+    <ul>
+      <li>本プロファイルは <strong>ROEST / Sample Roaster</strong> を基準に設計されています。他の焙煎機をお使いの場合は、投入温度・ドロップ温度などを適宜調整してください。</li>
+      <li>豆の産地・収穫年・保管状態によって最適な数値は異なります。プロファイルはあくまで出発点としてお使いください。</li>
+      <li>配布するプロファイルは目標値のみを含んでいます（カスタムアラートは含まれていません）。必要に応じてアプリ内で追加してください。</li>
+      <li>本プロファイルの利用・再配布は自由です。ご自身の焙煎スタイルに合わせてカスタマイズしてお使いください。</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 StudioBB. All rights reserved.</p>
+  <p style="margin-top: 6px;">
+    <a href="terms.html">利用規約</a> &nbsp;|&nbsp;
+    <a href="privacy.html">プライバシーポリシー</a>
+  </p>
+</footer>
+
+</body>
+</html>

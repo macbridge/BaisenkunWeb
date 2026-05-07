@@ -22,6 +22,7 @@
   <a href="index.html">ホーム</a>
   <a href="manual.html" class="active">使い方</a>
   <a href="qa.html">Q&amp;A</a>
+  <a href="profiles.html">プロファイル配布</a>
   <a href="terms.html">利用規約</a>
   <a href="privacy.html">プライバシーポリシー</a>
 </nav>
@@ -67,8 +68,12 @@
     <h3>温度を記録する</h3>
     <p>豆温度・排気温度をテキストフィールドに入力し「記録」ボタンをタップします。定期的に記録することで、精度の高いグラフが得られます。設定した間隔でリマインダー通知を受け取ることもできます。</p>
 
+    <h3>中点（TP）を記録する</h3>
+    <p>投入直後に温度が下がり、再び上昇に転じた最低点（中点 / ターニングポイント）を「中点」ボタンでワンタップ記録できます。グラフに紫の縦線で表示されます。</p>
+
     <h3>1ハゼ・2ハゼを記録する</h3>
     <p>ハゼが始まったタイミングで「1ハゼ」または「2ハゼ」ボタンをタップします。時刻が自動的に記録され、グラフにマーカーが表示されます。</p>
+    <p style="font-size: 13px; color: #8c6a4a;">※ 中点・1ハゼ・2ハゼ・焙煎終了のボタンはいずれも温度入力が必須です。温度フィールドに値を入力してからタップしてください。</p>
 
     <h3>焙煎を終了する</h3>
     <p>「焙煎終了」ボタンをタップすると確認ダイアログが表示されます。確定すると終了時刻が記録され、セッションが保存されます。</p>
@@ -77,6 +82,7 @@
     <ul>
       <li><strong style="color: #2563eb;">青い実線</strong> — 豆温度</li>
       <li><strong style="color: #888;">グレーの破線</strong> — 排気温度</li>
+      <li><strong style="color: #7c3aed;">紫の縦線</strong> — 中点（TP / ターニングポイント）</li>
       <li><strong style="color: #ca8a04;">黄色い縦線</strong> — 1ハゼ（1C）</li>
       <li><strong style="color: #ea580c;">オレンジの縦線</strong> — 2ハゼ（2C）</li>
       <li><strong style="color: #dc2626;">赤い縦線</strong> — 焙煎終了（Drop）</li>
@@ -115,8 +121,11 @@
     <ul>
       <li>右上の「＋」ボタンで新規プロファイルを作成</li>
       <li>投入温度・各フェーズの目標温度・目標時間などを設定</li>
+      <li><strong>中点（TP）・1ハゼ・2ハゼの目標温度と目標時刻</strong>を個別に設定可能</li>
+      <li>中点の目標時刻は「分：秒（M:SS）」形式で入力できます</li>
       <li>カスタムアラートで特定の時間・温度に通知を設定</li>
       <li>焙煎開始時にプロファイルを選択すると、グラフに目標ラインが表示される</li>
+      <li><a href="profiles.html" style="color: #7B3F00; font-weight: 700;">配布プロファイル</a>をインポートして即座に使い始めることもできます</li>
     </ul>
   </div>
 
@@ -129,6 +138,7 @@
       <li><strong>デフォルト器具名</strong> — 毎回入力する手間を省けます</li>
       <li><strong>温度入力リマインダー</strong> — 1分〜10分間隔、または「なし」で通知を無効化</li>
       <li><strong>データ管理</strong> — JSON形式でセッション・豆・プロファイルをエクスポート／インポート</li>
+      <li><strong>一括削除</strong> — 焙煎記録・豆ライブラリ・プロファイルをカテゴリごとに選択して一括削除できます（削除前に確認ダイアログが表示されます）</li>
     </ul>
   </div>
 
@@ -240,7 +250,7 @@
 </div>
 
 <footer>
-  <p>&copy; 2025 StudioBB. All rights reserved.</p>
+  <p>&copy; 2026 StudioBB. All rights reserved.</p>
   <p style="margin-top: 6px;">
     <a href="terms.html">利用規約</a> &nbsp;|&nbsp;
     <a href="privacy.html">プライバシーポリシー</a>

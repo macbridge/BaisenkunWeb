@@ -1,0 +1,19 @@
+{
+  "exportedAt": "2026-05-06T09:00:00Z",
+  "profiles": [
+    {
+      "chargeTemp": 208,
+      "memo": "Matt Winton Style - エルサルバドル SHB (Honey) - Optimized for Light roast.",
+      "name": "エルサルバドル SHB (Honey) Matt Winton Style",
+      "targetDTR": 10,
+      "targetDropTemp": 201,
+      "targetDryingEndTemp": 150,
+      "targetEquipment": "ROEST / Sample Roaster",
+      "targetFirstCrackMin": 6,
+      "targetFirstCrackTemp": 197,
+      "targetMaillardEndTemp": 195,
+      "targetRoastLevel": "Light Roast",
+      "totalTargetMinutes": 7.5
+    }
+  ]
+}

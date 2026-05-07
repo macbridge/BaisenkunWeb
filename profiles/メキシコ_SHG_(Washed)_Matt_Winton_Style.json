@@ -1,0 +1,19 @@
+{
+  "exportedAt": "2026-05-06T09:00:00Z",
+  "profiles": [
+    {
+      "chargeTemp": 208,
+      "memo": "Matt Winton Style - メキシコ SHG (Washed) - Optimized for Medium-Light roast.",
+      "name": "メキシコ SHG (Washed) Matt Winton Style",
+      "targetDTR": 13,
+      "targetDropTemp": 204,
+      "targetDryingEndTemp": 150,
+      "targetEquipment": "ROEST / Sample Roaster",
+      "targetFirstCrackMin": 7,
+      "targetFirstCrackTemp": 197,
+      "targetMaillardEndTemp": 198,
+      "targetRoastLevel": "Medium-Light Roast",
+      "totalTargetMinutes": 8.5
+    }
+  ]
+}
