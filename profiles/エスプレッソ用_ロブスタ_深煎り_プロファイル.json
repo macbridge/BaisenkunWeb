@@ -1,0 +1,19 @@
+{
+  "exportedAt": "2026-05-06T12:00:00Z",
+  "profiles": [
+    {
+      "chargeTemp": 195,
+      "memo": "Robusta Dark Roast for Espresso. Slow Maillard, deep finish for maximum body and crema.",
+      "name": "エスプレッソ用 ロブスタ 深煎り プロファイル",
+      "targetDTR": 23.5,
+      "targetDropTemp": 226,
+      "targetDryingEndTemp": 150,
+      "targetEquipment": "Drum Roaster",
+      "targetFirstCrackMin": 9,
+      "targetFirstCrackTemp": 202,
+      "targetMaillardEndTemp": 215,
+      "targetRoastLevel": "Dark Roast",
+      "totalTargetMinutes": 14.0
+    }
+  ]
+}
